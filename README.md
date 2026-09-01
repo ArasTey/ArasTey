@@ -1,7 +1,4 @@
-<h1 align="center">
-  <img src="assets/aras-logo.png" width="88" alt="Aras"/><br/>
-  Hi, I'm <b>ArasTey</b> <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="26px"/>
-</h1>
+
 
 <p align="center">
   <b>Free internet engineer.</b> I build VPN clients, anti-censorship tooling and<br/>
