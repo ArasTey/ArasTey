@@ -1,5 +1,3 @@
-
-
 <p align="center">
   <b>Free internet engineer.</b> I build VPN clients, anti-censorship tooling and<br/>
   Cloudflare-powered panels — Persian-first, privacy-first, everything client-side.
@@ -38,9 +36,9 @@ My focus: making the free internet accessible, even under heavy censorship.
 
 A full Android VPN client built from scratch — the result of community feature requests:
 - ⚡ **Smart Connect** — pings all servers at once, connects to the fastest
-- 🔄 **Global auto-sort** + 🏳️ **country flags** (GeoIP + provider labels)
-- 📊 **Subscription traffic & expiry** read from the sub link, 📢 announcements
+- 🏳️ **Country flags** — resolved from the server's real IP, automatically
 - 🔐 **`.arasc`** — my own encrypted config container: share configs that can only be **connected to, never extracted**
+- 📊 **Subscription stats** — traffic, expiry and announcements read from the sub link
 
 <div align="center">
 <a href="https://github.com/ArasTey/ArasClient/releases">📥 Download latest release</a> · <a href="https://github.com/ArasTey/ArasClient#readme">📖 Full README</a>
@@ -48,33 +46,28 @@ A full Android VPN client built from scratch — the result of community feature
 
 <br/>
 
-## 🛠️ Projects
+## 🛠️ Public projects
 
-<div align="center">
-
-| Project | What it does | Stack |
+| Project | What it does | Languages |
 |---|---|---|
-| <a href="https://github.com/ArasTey/ArasClient"><b>ArasClient</b></a><br/><sub>Android VPN client</sub> | Full client with encrypted `.arasc` sharing, Smart Connect, sub stats & flags | `Kotlin` `Compose` `Xray` |
-| <a href="https://github.com/ArasTey/cf-optimizor"><b>cf-optimizor</b></a><br/><sub>CDN config optimizer</sub> | Paste configs or a sub link → fragment & cipher-suite injection in one click. **100% offline, in-browser** | `JavaScript` `HTML` |
-| <a href="https://github.com/ArasTey/GooRay"><b>GooRay</b></a><br/><sub>Cloudflare control panel</sub> | Persian-first RTL panel: Apps Script control plane + Workers/D1 data plane, deploy from inside the panel | `Apps Script` `Workers` `D1` |
-| <a href="https://github.com/ArasTey/Aras-GP"><b>Aras-GP</b></a><br/><sub>Domain-fronting relay panel</sub> | Traffic disguised as ordinary TLS to google.com. Zero telemetry | `Python` |
-| <a href="https://github.com/ArasTey/awp-webproxy"><b>AWP</b></a><br/><sub>Telegram WEB Proxy manager</sub> | One-command deploy/validation layer for the official `tproxy-server` | `Bash` `Docker` |
-| <a href="https://github.com/ArasTey/A-RTP"><b>A-RTP</b></a><br/><sub>Railway WEB Proxy</sub> | Railway-deployed Telegram web proxy proof-of-concept | `Docker` `Railway` |
-| <a href="https://github.com/ArasTey/Waira"><b>Waira</b></a><br/><sub>AI companion</sub> | Trust-first persistent AI: continuity, living memory, provenance | `Python` |
-
-</div>
+| <a href="https://github.com/ArasTey/ArasClient"><b>ArasClient</b></a><br/><sub>Android VPN client</sub> | Full client with encrypted `.arasc` sharing, Smart Connect, sub stats & flags | `Kotlin` `Jetpack Compose` `Xray` |
+| <a href="https://github.com/ArasTey/cf-optimizor"><b>cf-optimizor</b></a><br/><sub>CDN config optimizer</sub> | Paste configs or a sub link → fragment & cipher-suite injection in one click. **100% offline, in-browser** | `HTML` `JavaScript` |
 
 <br/>
 
-## 🌐 Live tools
+## 🧠 My languages across projects
 
 <div align="center">
 
-<a href="https://arastey.github.io/cf-optimizor/">
-  <img src="https://img.shields.io/badge/🚀_cf-optimizor-TRY_IT_LIVE-059669?style=for-the-badge&labelColor=101418" alt="cf-optimizor live"/>
-</a>
+**Kotlin — 96%** of ArasClient · **HTML — 100%** of cf-optimizor
 
-*Optimize hundreds of VLESS/Trojan configs in seconds — right in your browser.*
+<img height="130" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ArasTey&layout=compact&hide_border=true&bg_color=101418&title_color=38bdf8&text_color=c9d1d9&langs_count=8" alt="top langs"/>
+
+![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white&labelColor=101418)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white&labelColor=101418)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black&labelColor=101418)
+
+**Also working with:** Jetpack Compose · Xray core · MMKV · GitHub Actions
 
 </div>
 
@@ -83,45 +76,47 @@ A full Android VPN client built from scratch — the result of community feature
 ## 📊 GitHub stats
 
 <div align="center">
-  <img height="160" src="https://github-readme-stats.vercel.app/api?username=ArasTey&show_icons=true&hide_border=true&bg_color=101418&title_color=38bdf8&icon_color=38bdf8&text_color=c9d1d9" alt="stats"/>
-  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ArasTey&layout=compact&hide_border=true&bg_color=101418&title_color=38bdf8&text_color=c9d1d9&langs_count=8" alt="langs"/>
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=ArasTey&show_icons=true&hide_border=true&bg_color=101418&title_color=38bdf8&icon_color=38bdf8&text_color=c9d1d9" alt="stats"/>
+  <img height="165" src="https://streak-stats.demolab.com?user=ArasTey&hide_border=true&background=101418&stroke=38bdf8&ring=0284c7&fire=ffd166&currStreakLabel=38bdf8" alt="streak"/>
 </div>
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=ArasTey&bg_color=101418&color=38bdf8&line=0284c7&point=ffd166&hide_border=true&area=true&area_color=0a3a62" alt="activity"/>
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=ArasTey&bg_color=101418&color=c9d1d9&line=0284c7&point=ffd166&hide_border=true&area=true&area_color=0a3a62" alt="activity graph"/>
 </div>
 
 <br/>
 
-## 🎯 Philosophy
+## 🎯 How I work
+
+```json
+{
+  "focus": ["anti-censorship", "VPN clients", "CDN optimizers"],
+  "principles": {
+    "privacy": "100% client-side — no telemetry, no backends",
+    "audience": "Persian-first, built for people behind firewalls",
+    "process": "ship working tools → listen to community → improve fast"
+  },
+  "currently_building": "making ArasClient the best VPN client for Android",
+  "open_for": "ideas, bug reports, feature requests — DM me on Telegram"
+}
+```
+
+<br/>
+
+## 📫 Contact
 
 <div align="center">
 
-| | |
-|---|---|
-| 🔓 | **Free internet is a right** — my tools are built for people behind firewalls |
-| 🛡️ | **Privacy by default** — client-side processing, zero telemetry |
-| 🇮🇷 | **Persian-first** — RTL interfaces, Persian docs, for my people |
-| ⚡ | **Working > perfect** — ship tools people use, then improve with their feedback |
+<a href="https://t.me/imArasTey">
+  <img src="https://img.shields.io/badge/Telegram-@imArasTey-26A5E4?style=for-the-badge&logo=telegram&labelColor=101418" alt="Telegram"/>
+</a>
+
+**Have a tool idea? DM me — I build community-requested tools.** ❤️
 
 </div>
 
 <br/>
 
-## 📫 Reach me
-
 <div align="center">
-
-<a href="https://t.me/imArasTey"><img src="https://img.shields.io/badge/Telegram-@imArasTey-26A5E4?style=for-the-badge&logo=telegram&labelColor=101418" alt="Telegram"/></a>
-
-*Need a tool built? DM me — I take ideas from the community and build them.* ❤️
-
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=38BDF8&center=true&vCenter=true&random=false&width=520&lines=Thanks+for+visiting+my+profile+%E2%9D%A4%EF%B8%8F;Free+internet+is+a+right;Star+your+favorite+repo+%E2%AD%90" alt="typing footer"/>
 </div>
-
-<br/>
-
-<div align="center">
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=38BDF8&center=true&vCenter=true&random=false&width=440&lines=Free+internet+engineer;VPN+clients+%7C+anti-censorship+tooling;Everything+client-side;Thanks+for+visiting+%E2%9D%A4%EF%B8%8F" alt="typing"/>
-</div>
-
-<br/>
