@@ -128,7 +128,3 @@ A full Android VPN client built from scratch — the result of community feature
 </div>
 
 <br/>
-
-<div align="center">
-<img src="https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake-dark.svg" alt="snake"/>
-</div>
