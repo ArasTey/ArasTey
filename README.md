@@ -90,10 +90,10 @@ Persian-first · client-side by default · built for people behind firewalls.</e
 
 <br/>
 
-## <img src="https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f40d.svg" width="22" valign="middle"/> Currently
+## <img src="https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f40d.svg" width="22" valign="middle"/> What this is about
 
 <p align="center">
-<img src="assets/session.svg" alt="ArasClient establishing a tunnel — Smart Connect racing servers, 41ms on VLESS with REALITY, .arasc container locked" width="660"/>
+<img src="assets/session.svg" alt="A censorship filter is blocked while encrypted packets travel from a local client through a Cloudflare Worker tunnel to an open destination" width="700"/>
 </p>
 
 <br/>

@@ -1,122 +1,106 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 350" width="660" height="350" role="img" aria-labelledby="ttl desc">
-<title id="ttl">ArasTey — animated terminal session</title>
-<desc id="desc">A terminal window showing an ArasClient connection: a typed connect command, Smart Connect racing servers, a 41 ms latency result on VLESS with REALITY, an .arasc container in locked state, and a tunnel progress bar at 82 percent.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 372" width="700" height="372" role="img" aria-labelledby="ttl desc">
+<title id="ttl">ArasTey — packets getting through</title>
+<desc id="desc">A censorship filter wall on the left is struck through, while encrypted packets travel from a local client through a Cloudflare Worker tunnel to an open destination on the right.</desc>
 
 <style>
   .t { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
-  .row { animation: rise .55s cubic-bezier(.2,.8,.2,1) both; }
-  @keyframes rise { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: none; } }
 
-  /* type the command one character at a time */
-  .typed { clip-path: inset(0 100% 0 0); animation: type 2.4s steps(32, end) .7s both; }
-  @keyframes type { to { clip-path: inset(0 -4% 0 0); } }
+  /* packets travel the tunnel */
+  /* packets travel the tunnel; 418px = track (408) + the 10px gap to the node */
+  .pk { animation: travel 2.6s linear infinite; }
+  @keyframes travel { from { transform: translateX(0); } to { transform: translateX(418px); } }
 
-  .caret { animation: blink 1.15s steps(1, end) 3.4s infinite; }
-  @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+  /* staggered travel, so the tunnel always feels busy */
+  .d1 { animation-delay: 0s; } .d2 { animation-delay: .42s; } .d3 { animation-delay: .84s; }
+  .d4 { animation-delay: 1.26s; } .d5 { animation-delay: 1.68s; } .d6 { animation-delay: 2.1s; }
 
-  /* tunnel fills left to right */
-  .fill { transform-box: fill-box; transform-origin: left center; animation: fill 3.1s cubic-bezier(.22,.9,.24,1) 3.9s both; }
-  @keyframes fill { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  /* the filter tries, and fails */
+  .wall { transform-box: fill-box; transform-origin: center; animation: shake .42s cubic-bezier(.36,.07,.19,.97) 1.2s 3; }
+  @keyframes shake {
+    10%, 90% { transform: translateX(-2px); } 20%, 80% { transform: translateX(3px); }
+    30%, 50%, 70% { transform: translateX(-5px); } 40%, 60% { transform: translateX(5px); }
+  }
+  .strike { animation: draw .5s ease-out 1.05s both; }
+  @keyframes draw { from { stroke-dashoffset: 62; } to { stroke-dashoffset: 0; } }
 
-  /* the live indicator breathes */
-  .live { transform-box: fill-box; transform-origin: center; animation: pulse 2.1s ease-in-out 4s infinite; }
-  @keyframes pulse { 0%, 100% { opacity: .3; transform: scale(.72); } 50% { opacity: 1; transform: scale(1.15); } }
+  /* destination node breathes once traffic lands */
+  .node { transform-box: fill-box; transform-origin: center; animation: breathe 2.6s ease-in-out 1.6s infinite; }
+  @keyframes breathe { 0%, 100% { opacity: .72; } 50% { opacity: 1; } }
 
-  /* latency segments light up left to right; --o carries each tier's resting opacity */
-  .seg { opacity: var(--o, 1); animation: pop .3s ease-out both; }
-  @keyframes pop { from { opacity: 0; } to { opacity: var(--o, 1); } }
+  /* live indicator */
+  .live { transform-box: fill-box; transform-origin: center; animation: pulse 2s ease-in-out infinite; }
+  @keyframes pulse { 0%, 100% { opacity: .3; transform: scale(.7); } 50% { opacity: 1; transform: scale(1.1); } }
 
-  /* a slow shimmer sweeping the established tunnel */
-  .sheen { transform-box: fill-box; transform-origin: center; animation: sheen 3.4s ease-in-out 7s infinite; }
-  @keyframes sheen { 0% { transform: translateX(-120%); } 55%, 100% { transform: translateX(320%); } }
+  /* title fades up */
+  .rise { animation: rise .7s cubic-bezier(.2,.8,.2,1) both; }
+  @keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
 
   @media (prefers-reduced-motion: reduce) {
-    .row, .seg, .fill { opacity: 1; animation: none; }
-    .typed { clip-path: none; animation: none; }
-    .fill { transform: scaleX(1); }
-    .caret, .live, .sheen { animation: none; opacity: 1; }
+    .pk, .wall, .strike, .node, .live, .rise { animation: none !important; }
+    .strike { stroke-dashoffset: 0; }
   }
 </style>
 
-<!-- window -->
-<rect x="8" y="8" width="644" height="334" rx="14" fill="#0b0f16" stroke="#1f2937"/>
-<path d="M8 46 h644" stroke="#1f2937" fill="none"/>
+<rect x="6" y="6" width="688" height="360" rx="14" fill="#0b0f16" stroke="#1f2937"/>
 
-<!-- title bar -->
-<circle cx="30" cy="27" r="5.5" fill="#ff5f57"/>
-<circle cx="48" cy="27" r="5.5" fill="#febc2e"/>
-<circle cx="66" cy="27" r="5.5" fill="#28c840"/>
-<text class="t" x="88" y="32" font-size="12" fill="#6b7280">aras@arastey — ~/client</text>
+<!-- header -->
+<g class="rise" style="animation-delay:.1s">
+  <text class="t" x="34" y="42" font-size="12" fill="#6b7280">aras@arastey — ~/circumvention</text>
+  <circle class="live" cx="614" cy="37" r="5" fill="#22c55e"/>
+  <text class="t" x="626" y="42" font-size="10.5" fill="#22c55e" text-anchor="end" letter-spacing="1.4">LIVE</text>
+</g>
+<path d="M22 60 h656" stroke="#1f2937" fill="none"/>
 
-<!-- live dot -->
-<circle class="live" cx="600" cy="27" r="5" fill="#22c55e"/>
-<text class="t" x="612" y="32" font-size="10.5" fill="#22c55e" text-anchor="end" letter-spacing="1.4">LIVE</text>
-
-<g class="t" font-size="13.5">
-
-  <!-- command -->
-  <g class="typed">
-    <text x="48" y="80" fill="#e5e7eb"><tspan fill="#38bdf8">$</tspan><tspan> arasc --connect --region auto</tspan></text>
+<!-- ── the censorship filter ── -->
+<g class="wall" style="animation-delay:1.2s">
+  <rect x="42" y="106" width="112" height="150" rx="10" fill="#2a1416" stroke="#7f1d1d"/>
+  <g stroke="#ef4444" stroke-opacity=".55" stroke-width="2.5" stroke-linecap="round">
+    <path d="M56 126 L140 236"/><path d="M140 126 L56 236"/>
+    <path d="M56 168 L140 236"/><path d="M140 168 L56 236"/>
+    <path d="M56 210 L140 126"/>
   </g>
-  <rect class="caret" x="316" y="68" width="9" height="15" fill="#38bdf8"/>
+  <rect class="strike" x="56" y="168" width="62" height="26" rx="6" fill="none"
+        stroke="#f87171" stroke-width="3.5" stroke-linecap="round"
+        stroke-dasharray="62" stroke-dashoffset="62"/>
+  <text class="t" x="98" y="284" font-size="11" fill="#f87171" text-anchor="middle">FILTER</text>
+  <text class="t" x="98" y="301" font-size="9.5" fill="#7f1d1d" text-anchor="middle">BLOCKED</text>
+</g>
 
-  <!-- smart-connect -->
-  <g class="row" style="animation-delay:2.5s">
-    <text x="48" y="116" fill="#22c55e">&#10003;</text>
-    <text x="68" y="116" fill="#9ca3af">smart-connect</text>
-    <text x="200" y="116" fill="#e5e7eb">3 servers raced</text>
-  </g>
+<!-- ── the tunnel ── -->
+<g>
+  <rect x="182" y="176" width="408" height="10" rx="5" fill="#0f1b2a"/>
+  <rect x="182" y="176" width="408" height="10" rx="5" fill="none" stroke="#1e3a5f" stroke-width="1.5"/>
+  <text class="t" x="386" y="166" font-size="10" fill="#38bdf8" text-anchor="middle" letter-spacing="1.2">CLOUDFLARE WORKER TUNNEL</text>
 
-  <!-- latency -->
-  <g class="row" style="animation-delay:2.85s">
-    <text x="48" y="140" fill="#22c55e">&#10003;</text>
-    <text x="68" y="140" fill="#9ca3af">latency</text>
-    <text x="200" y="140" fill="#e5e7eb">41 ms</text>
-    <rect class="seg" style="animation-delay:3.3s;  --o:1"    x="268" y="131" width="12" height="10" rx="2" fill="#22c55e"/>
-    <rect class="seg" style="animation-delay:3.42s; --o:.88"  x="284" y="131" width="12" height="10" rx="2" fill="#22c55e"/>
-    <rect class="seg" style="animation-delay:3.54s; --o:.88"  x="300" y="131" width="12" height="10" rx="2" fill="#22c55e"/>
-    <rect class="seg" style="animation-delay:3.66s; --o:.76"  x="316" y="131" width="12" height="10" rx="2" fill="#22c55e"/>
-    <rect class="seg" style="animation-delay:3.78s; --o:.76"  x="332" y="131" width="12" height="10" rx="2" fill="#22c55e"/>
-    <rect class="seg" style="animation-delay:3.90s; --o:.64"  x="348" y="131" width="12" height="10" rx="2" fill="#22c55e"/>
-    <rect class="seg" style="animation-delay:4.02s; --o:.64"  x="364" y="131" width="12" height="10" rx="2" fill="#22c55e"/>
-    <rect x="380" y="131" width="12" height="10" rx="2" fill="#1f2937"/>
-  </g>
-
-  <!-- protocol -->
-  <g class="row" style="animation-delay:3.2s">
-    <text x="48" y="164" fill="#22c55e">&#10003;</text>
-    <text x="68" y="164" fill="#9ca3af">protocol</text>
-    <text x="200" y="164" fill="#e5e7eb">VLESS</text>
-    <text x="252" y="164" fill="#64748b">·</text>
-    <text x="266" y="164" fill="#38bdf8">REALITY</text>
-  </g>
-
-  <!-- container -->
-  <g class="row" style="animation-delay:3.55s">
-    <text x="48" y="188" fill="#22c55e">&#10003;</text>
-    <text x="68" y="188" fill="#9ca3af">container</text>
-    <text x="200" y="188" fill="#e5e7eb">.arasc</text>
-    <rect x="258" y="178" width="58" height="14" rx="7" fill="#14532d" stroke="#22c55e" stroke-opacity=".55"/>
-    <text x="287" y="188.5" font-size="9.5" fill="#4ade80" text-anchor="middle" letter-spacing=".6">LOCKED</text>
-  </g>
-
-  <!-- tunnel -->
-  <g class="row" style="animation-delay:3.9s">
-    <text x="48" y="226" fill="#9ca3af">tunnel established</text>
-  </g>
-
+  <!-- packets in flight -->
   <g>
-    <rect x="48" y="241" width="354" height="14" rx="7" fill="#132033"/>
-    <rect class="fill" x="48" y="241" width="290" height="14" rx="7" fill="#22c55e"/>
-    <rect class="sheen" x="48" y="241" width="46" height="14" rx="7" fill="#ffffff" opacity=".22"/>
-    <text class="row" style="animation-delay:6.9s" x="416" y="253" fill="#22c55e">82%</text>
+    <rect class="pk d1" x="182" y="177" width="26" height="8" rx="4" fill="#22c55e" opacity=".9"/>
+    <rect class="pk d2" x="182" y="177" width="18" height="8" rx="4" fill="#4ade80" opacity=".75"/>
+    <rect class="pk d3" x="182" y="177" width="22" height="8" rx="4" fill="#22c55e" opacity=".6"/>
+    <rect class="pk d4" x="182" y="177" width="14" height="8" rx="4" fill="#38bdf8" opacity=".7"/>
+    <rect class="pk d5" x="182" y="177" width="24" height="8" rx="4" fill="#22c55e" opacity=".5"/>
+    <rect class="pk d6" x="182" y="177" width="16" height="8" rx="4" fill="#4ade80" opacity=".65"/>
   </g>
+</g>
 
-  <!-- prompt -->
-  <g class="row" style="animation-delay:7.2s">
-    <text x="48" y="290" fill="#38bdf8">&gt;</text>
-    <rect class="caret" x="64" y="278" width="9" height="15" fill="#38bdf8"/>
-  </g>
+<!-- ── the open destination ── -->
+<g>
+  <circle class="node" cx="626" cy="181" r="26" fill="#052e16" stroke="#22c55e" stroke-width="2"/>
+  <path d="M615 181 l8 8 l15 -16" fill="none" stroke="#4ade80" stroke-width="3.2"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <text class="t" x="626" y="232" font-size="10" fill="#22c55e" text-anchor="middle" letter-spacing="1">OPEN</text>
+</g>
 
+<!-- ── client ── -->
+<g class="rise" style="animation-delay:.3s">
+  <rect x="30" y="152" width="132" height="58" rx="9" fill="#0f172a" stroke="#334155"/>
+  <text class="t" x="46" y="176" font-size="11.5" fill="#e5e7eb">ArasClient</text>
+  <text class="t" x="46" y="194" font-size="9.5" fill="#64748b">local · client-side</text>
+</g>
+
+<!-- ── caption ── -->
+<g class="rise" style="animation-delay:.55s">
+  <text class="t" x="34" y="340" font-size="12.5" fill="#c9d1d9">the filter blocks the request. the tunnel doesn't negotiate.</text>
+  <text class="t" x="666" y="340" font-size="12.5" fill="#38bdf8" text-anchor="end">$ arasc --connect</text>
 </g>
 </svg>
