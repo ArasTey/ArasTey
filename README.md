@@ -90,10 +90,10 @@ Persian-first · client-side by default · built for people behind firewalls.</e
 
 <br/>
 
-## <img src="https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f40d.svg" width="22" valign="middle"/> Contribution Snake
+## <img src="https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f40d.svg" width="22" valign="middle"/> Currently
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/ArasTey/ArasTey/gh-pages/github-contribution-snake-dark.svg" alt="ArasTey's contribution snake" width="100%"/>
+<img src="assets/session.svg" alt="ArasClient establishing a tunnel — Smart Connect racing servers, 41ms on VLESS with REALITY, .arasc container locked" width="660"/>
 </p>
 
 <br/>
