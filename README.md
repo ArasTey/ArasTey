@@ -93,7 +93,7 @@ Persian-first · client-side by default · built for people behind firewalls.</e
 ## <img src="https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f40d.svg" width="22" valign="middle"/> What this is about
 
 <p align="center">
-<img src="assets/session.svg" alt="ArasClient running locally with no backend, carrying encrypted packets past a struck-through censorship filter through a Cloudflare Worker tunnel to an open destination" width="700"/>
+<img src="assets/session.svg" alt="A rotating wireframe globe with a tilted orbital ring and a glowing arc travelling from a local point to one abroad" width="700"/>
 </p>
 
 <br/>
