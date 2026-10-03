@@ -27,6 +27,28 @@
   .pt { animation: pt 2.4s ease-in-out infinite; }
   @keyframes pt { 0%, 100% { opacity: .2; } 50% { opacity: 1; } }
 
+  /* each point fires an expanding ring when it pulses */
+  .ping { transform-box: fill-box; transform-origin: center; animation: ping 2.4s ease-out infinite; }
+  @keyframes ping { 0% { transform: scale(.4); opacity: .8; } 100% { transform: scale(3.2); opacity: 0; } }
+  .pg1 { animation-delay: 0s; } .pg2 { animation-delay: .8s; } .pg3 { animation-delay: 1.6s; }
+
+  /* the globe breathes very slightly, so it never feels frozen */
+  .breathe { transform-box: view-box; transform-origin: 350px 148px; animation: breathe 7s ease-in-out infinite; }
+  @keyframes breathe { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.018); } }
+
+  /* telemetry values flicker like a live readout */
+  .tick { animation: tick 4s steps(1) infinite; }
+  @keyframes tick { 0%, 88% { opacity: 1; } 89%, 92% { opacity: .35; } 93%, 100% { opacity: 1; } }
+  .tk1 { animation-delay: .3s; } .tk2 { animation-delay: 1.4s; } .tk3 { animation-delay: 2.6s; }
+
+  /* a faint sweep line crosses the globe, like a radar pass */
+  .sweep { transform-box: view-box; transform-origin: 350px 148px; animation: sweep 6s linear infinite; }
+  @keyframes sweep { from { transform: rotate(-90deg); } to { transform: rotate(270deg); } }
+
+  /* the arc's dashed guide shimmers */
+  .guide { animation: guide 3s ease-in-out infinite; }
+  @keyframes guide { 0%, 100% { stroke-opacity: .28; } 50% { stroke-opacity: .7; } }
+
   /* the travelling arc — offset-path keeps the head on the curve */
   .arc {
     offset-path: path("M120 200 Q350 18 580 200");
@@ -39,8 +61,12 @@
     100% { offset-distance: 100%; opacity: 0; }
   }
 
+  /* a second head trailing the first, so the route reads as a stream */
+  .arc2 { animation-delay: -.7s; }
+  .arc3 { animation-delay: -1.4s; }
+
   @media (prefers-reduced-motion: reduce) {
-    .gl, .gl2, .ring, .pt, .arc { animation: none !important; }
+    .gl, .gl2, .ring, .pt, .arc, .ping, .breathe, .tick, .sweep, .guide { animation: none !important; }
     .arc { offset-distance: 100%; opacity: 1; }
   }
 </style>
@@ -55,26 +81,44 @@
   <path d="M70 274 h-44 v-32"/>
 </g>
 <text class="t" x="26" y="45" font-size="9" fill="#164e63" letter-spacing="2.2">NET.MESH // TRACE</text>
-<text class="t" x="674" y="45" font-size="9" fill="#22c55e" text-anchor="end" letter-spacing="2.2">LINK ACTIVE</text>
+<text class="t tk1 tick" x="674" y="45" font-size="9" fill="#22c55e" text-anchor="end" letter-spacing="2.2">LINK ACTIVE</text>
 <text class="t" x="26" y="286" font-size="9" fill="#164e63" letter-spacing="2.2">ORIGIN UNKNOWN</text>
-<text class="t" x="674" y="286" font-size="9" fill="#164e63" text-anchor="end" letter-spacing="2.2">NO SERVER OF MINE</text>
+<text class="t tk2 tick" x="674" y="286" font-size="9" fill="#164e63" text-anchor="end" letter-spacing="2.2">NO SERVER OF MINE</text>
+<text class="t tk3 tick" x="350" y="45" font-size="9" fill="#164e63" text-anchor="middle" letter-spacing="2.2">ROUTE ACTIVE</text>
 
 <!-- ══ the globe ══ -->
-<g fill="none" stroke="#155e75" stroke-width="1.1">
-  <circle cx="350" cy="148" r="74"/>
+<g class="breathe">
+  <g fill="none" stroke="#155e75" stroke-width="1.1">
+    <circle cx="350" cy="148" r="74"/>
 
-  <g class="gl">
-    <ellipse cx="350" cy="148" rx="74" ry="26"/>
-    <ellipse cx="350" cy="148" rx="74" ry="52"/>
-    <ellipse cx="350" cy="148" rx="26" ry="74"/>
-    <ellipse cx="350" cy="148" rx="52" ry="74"/>
-    <path d="M276 148 h148"/>
+    <g class="gl">
+      <ellipse cx="350" cy="148" rx="74" ry="26"/>
+      <ellipse cx="350" cy="148" rx="74" ry="52"/>
+      <ellipse cx="350" cy="148" rx="26" ry="74"/>
+      <ellipse cx="350" cy="148" rx="52" ry="74"/>
+      <path d="M276 148 h148"/>
+    </g>
+
+    <g class="gl2" opacity=".45">
+      <path d="M288 110 Q350 148 288 186"/>
+      <path d="M412 110 Q350 148 412 186"/>
+    </g>
+
+    <!-- radar-style sweep across the sphere -->
+    <g class="sweep" opacity=".38">
+      <path d="M276 148 A74 74 0 0 1 424 148" fill="none" stroke="#22d3ee" stroke-width="1.4"/>
+    </g>
   </g>
 
-  <g class="gl2" opacity=".45">
-    <path d="M288 110 Q350 148 288 186"/>
-    <path d="M412 110 Q350 148 412 186"/>
+  <!-- contact points + their expanding rings -->
+  <g>
+    <circle class="pg1 ping" cx="422" cy="148" r="9" fill="none" stroke="#22d3ee" stroke-width="1"/>
+    <circle class="pg2 ping" cx="350" cy="74"  r="9" fill="none" stroke="#22d3ee" stroke-width="1"/>
+    <circle class="pg3 ping" cx="278" cy="148" r="9" fill="none" stroke="#22d3ee" stroke-width="1"/>
   </g>
+  <circle class="pt" cx="422" cy="148" r="3" fill="#22d3ee"/>
+  <circle class="pt" style="animation-delay:.6s"  cx="350" cy="74"  r="3" fill="#22d3ee"/>
+  <circle class="pt" style="animation-delay:1.2s" cx="278" cy="148" r="3" fill="#22d3ee"/>
 </g>
 
 <!-- ══ orbital ring ══ -->
@@ -90,8 +134,10 @@
 <circle class="pt" style="animation-delay:1.2s" cx="278" cy="148" r="3" fill="#22d3ee"/>
 
 <!-- ══ the long way around ══ -->
-<path d="M120 200 Q350 18 580 200" fill="none" stroke="#164e63" stroke-width="1" stroke-dasharray="3 5"/>
-<circle class="arc" cx="0" cy="0" r="6" fill="#a3e635" filter="url(#glow)"/>
+<path class="guide" d="M120 200 Q350 18 580 200" fill="none" stroke="#164e63" stroke-width="1" stroke-dasharray="3 5"/>
+<circle class="arc"  cx="0" cy="0" r="6" fill="#a3e635" filter="url(#glow)"/>
+<circle class="arc arc2" cx="0" cy="0" r="3.5" fill="#a3e635" opacity=".6" filter="url(#glow)"/>
+<circle class="arc arc3" cx="0" cy="0" r="2.5" fill="#a3e635" opacity=".35"/>
 
 <!-- ══ endpoints ══ -->
 <circle cx="120" cy="200" r="5" fill="#38bdf8"/>
