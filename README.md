@@ -1,21 +1,20 @@
-<h1 align="center">
-  <img src="assets/aras-logo.png" width="80" alt="ArasTey"/><br/>
-  Hi, I'm ArasTey <img src="https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f44b.svg" width="26">
-</h1>
+<p align="center">
+  <img src="assets/welcome-banner-animated.svg" alt="ArasTey — Anti-censorship tooling and privacy-first clients" width="100%"/>
+</p>
 
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=18&pause=1000&color=38BDF8&center=true&vCenter=true&random=false&width=560&lines=Anti-censorship+tooling+%26+privacy-first+clients;Persian-first+%C2%B7+client-side+by+default;Built+for+people+behind+firewalls" alt="typing"/>
-
-<br/>
-
 [![Telegram](https://img.shields.io/badge/Telegram-%40imArasTey-26A5E4?style=flat-square&logo=Telegram&logoColor=white)](https://t.me/imArasTey)
-[![Website](https://img.shields.io/badge/Repositories-2088FF?style=flat-square&logo=github&logoColor=white)](https://github.com/ArasTey?tab=repositories)
+[![Repositories](https://img.shields.io/badge/Repositories-2088FF?style=flat-square&logo=github&logoColor=white)](https://github.com/ArasTey?tab=repositories)
 [![Profile Views](https://komarev.com/ghpvc/?username=ArasTey&label=Views&color=101418&style=flat-square)](https://github.com/ArasTey)
 
 </div>
 
 <br/>
+
+<div align="center">
+<img src="assets/line.gif" alt="" width="771"/>
+</div>
 
 ## <img src="https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f4cc.svg" width="20"> About Me
 
@@ -26,6 +25,10 @@
 - 🤝 I answer DMs and ship community-requested features
 
 <br/>
+
+<div align="center">
+<img src="assets/line.gif" alt="" width="771"/>
+</div>
 
 ## <img src="https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f9f0.svg" width="20"> Core & Tools
 
@@ -42,7 +45,7 @@
 
 <div align="left">
 
-<img src="https://skillicons.dev/icons?i=kotlin,js,ts,python,cloudflare,docker,android,git,githubactions,html,css,md&theme=dark" alt="skills" width="420"/>
+<img src="https://skillicons.dev/icons?i=kotlin,js,ts,python,cloudflare,docker,android,git,githubactions,html,css&theme=dark" alt="skills" width="420"/>
 
 </div>
 
@@ -50,15 +53,25 @@
 
 <br/>
 
+<div align="center">
+<img src="assets/line.gif" alt="" width="771"/>
+</div>
+
 ## <img src="https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f3c6.svg" width="20"> Achievements
 
 <div align="center">
 
-<img src="https://github-profile-trophy.vercel.app/?username=ArasTey&theme=gitdimmed&no-frame=true&row=1&column=6&margin-w=6&margin-h=6" alt="trophies" width="700"/>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ArasTey&theme=github_dark" alt="profile details" width="246"/>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=ArasTey&theme=github_dark" alt="repos per language" width="246"/>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=ArasTey&theme=github_dark" alt="productive time" width="246"/>
 
 </div>
 
 <br/>
+
+<div align="center">
+<img src="assets/line.gif" alt="" width="771"/>
+</div>
 
 ## <img src="https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f680.svg" width="20"> Featured Builds
 
@@ -69,6 +82,10 @@
 *Paste configs or a subscription link and inject CDN, fingerprint, cipher-suite and final-mask parameters in one click. 100% offline.*
 
 <br/>
+
+<div align="center">
+<img src="assets/line.gif" alt="" width="771"/>
+</div>
 
 ## <img src="https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f4ca.svg" width="20"> Stats & Activity
 
@@ -84,16 +101,20 @@
 
 <br/><br/>
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=ArasTey&bg_color=101418&color=38bdf8&line=0284c7&point=ffd166&area=true&hide_border=true" alt="activity graph" width="700"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://next.ossinsight.io/widgets/official/compose-user-dashboard-stats/thumbnail.png?user_id=308009703&image_size=auto&color_scheme=dark" width="771" height="auto">
+  <img src="https://next.ossinsight.io/widgets/official/compose-user-dashboard-stats/thumbnail.png?user_id=308009703&image_size=auto&color_scheme=light" alt="Profile Stats" width="771" height="auto">
+</picture>
 
-<br/><br/>
-
-<img src="https://next.ossinsight.io/widgets/official/compose/user-stats?user_id=308009703&image_type=total&color_scheme=dark" alt="OSS Insight user stats" width="700"/>
 
 
 </div>
 
 <br/>
+
+<div align="center">
+<img src="assets/line.gif" alt="" width="771"/>
+</div>
 
 ## <img src="https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f4e1.svg" width="20"> Let's Build Something Together
 

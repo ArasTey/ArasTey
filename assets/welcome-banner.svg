@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="220" viewBox="0 0 820 220" role="img" aria-label="ArasTey — Anti-censorship tooling and privacy-first clients">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1016"/>
+      <stop offset="1" stop-color="#101418"/>
+    </linearGradient>
+    <linearGradient id="arc" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38bdf8" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#ffd166"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#ffd166"/>
+    </linearGradient>
+    <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#e2e8f0"/>
+      <stop offset="1" stop-color="#7dd3fc"/>
+    </linearGradient>
+    <radialGradient id="vig" cx="0.5" cy="0.35" r="0.9">
+      <stop offset="0" stop-color="#1c2a3a" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#101418" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="820" height="220" rx="16" fill="url(#bg)"/>
+  <rect width="820" height="220" rx="16" fill="url(#vig)"/>
+
+  <!-- globe arcs hint -->
+  <g fill="none" stroke="#38bdf8" stroke-opacity="0.16" stroke-width="1.4">
+    <ellipse cx="140" cy="110" rx="86" ry="86"/>
+    <ellipse cx="140" cy="110" rx="60" ry="86"/>
+    <ellipse cx="140" cy="110" rx="86" ry="34"/>
+    <path d="M54 110h172"/>
+  </g>
+  <circle cx="140" cy="110" r="3.2" fill="#ffd166"/>
+  <path d="M54 110 A86 86 0 0 1 226 110" fill="none" stroke="url(#glow)" stroke-width="2.6" stroke-linecap="round"/>
+
+  <!-- title -->
+  <text x="262" y="92" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="52" font-weight="700" fill="url(#title)">Hi, I'm ArasTey</text>
+  <text x="264" y="126" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="17" fill="#94a3b8">Anti-censorship tooling &amp; privacy-first clients</text>
+
+  <!-- pills -->
+  <g font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="600">
+    <rect x="264" y="150" width="150" height="26" rx="13" fill="#12212e" stroke="#38bdf8" stroke-opacity="0.5"/>
+    <circle cx="280" cy="163" r="4" fill="#34d399"/>
+    <text x="292" y="167" fill="#7dd3fc">Persian-first</text>
+    <rect x="424" y="150" width="168" height="26" rx="13" fill="#12212e" stroke="#ffd166" stroke-opacity="0.45"/>
+    <text x="438" y="167" fill="#ffd166">client-side by default</text>
+  </g>
+
+  <!-- bottom line -->
+  <path d="M24 196 H 796" stroke="#1f2b3a" stroke-width="2"/>
+  <path d="M24 196 H 320" stroke="url(#glow)" stroke-width="2.6" stroke-linecap="round"/>
+</svg>
