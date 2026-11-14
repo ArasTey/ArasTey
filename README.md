@@ -1,6 +1,5 @@
-<h1 align="center">
-  <img src="assets/aras-logo.png" width="80" alt="ArasTey"/><br/>
-  Hi, I'm ArasTey <img src="https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f44b.svg" width="26">
+
+  Hi, I'm ArasTey 
 </h1>
 
 <div align="center">
