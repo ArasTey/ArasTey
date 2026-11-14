@@ -1,6 +1,6 @@
 > [!CAUTION]
 > **Security Notice**
-> If you believe this project does not comply with GitHub's Community Guidelines or Acceptable Use Policies, please let us know. We make every effort to ensure all our projects are secure and compliant with GitHub's policies.
+> If you believe these projects does not comply with GitHub's Community Guidelines or Acceptable Use Policies, please let us know. We make every effort to ensure all our projects are secure and compliant with GitHub's policies.
 
 <h2 align="center">Hi, I'm ArasTey! <img src="https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f44b.svg" width="30" style="margin-top: 1rem;"></h2>
 
