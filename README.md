@@ -1,5 +1,6 @@
-
-  Hi, I'm ArasTey 
+<h1 align="center">
+  <img src="assets/aras-logo.png" width="80" alt="ArasTey"/><br/>
+  Hi, I'm ArasTey <img src="https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f44b.svg" width="26">
 </h1>
 
 <div align="center">
@@ -39,7 +40,23 @@
 
 </div>
 
+<div align="left">
+
+<img src="https://skillicons.dev/icons?i=kotlin,js,ts,python,cloudflare,docker,android,git,githubactions,html,css,md&theme=dark" alt="skills" width="420"/>
+
+</div>
+
 **Also working with:** Jetpack Compose · MMKV · Google Apps Script · Cloudflare Workers · D1 · Durable Objects · Railway · GitHub Actions
+
+<br/>
+
+## <img src="https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f3c6.svg" width="20"> Achievements
+
+<div align="center">
+
+<img src="https://github-profile-trophy.vercel.app/?username=ArasTey&theme=gitdimmed&no-frame=true&row=1&column=6&margin-w=6&margin-h=6" alt="trophies" width="700"/>
+
+</div>
 
 <br/>
 
@@ -64,6 +81,15 @@
 <img src="https://img.shields.io/github/followers/ArasTey?label=Followers&color=38bdf8&style=for-the-badge&labelColor=101418" alt="followers"/>
 <img src="https://img.shields.io/github/stars/ArasTey?label=Total%20Stars&color=38bdf8&style=for-the-badge&labelColor=101418" alt="total stars"/>
 <img src="https://img.shields.io/github/last-commit/ArasTey/ArasTey?label=Last%20Commit&color=0284c7&style=for-the-badge&labelColor=101418" alt="last commit"/>
+
+<br/><br/>
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=ArasTey&bg_color=101418&color=38bdf8&line=0284c7&point=ffd166&area=true&hide_border=true" alt="activity graph" width="700"/>
+
+<br/><br/>
+
+<img src="https://next.ossinsight.io/widgets/official/compose/user-stats?user_id=308009703&image_type=total&color_scheme=dark" alt="OSS Insight user stats" width="700"/>
+
 
 </div>
 
